@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Shop_Yar.Data.Interfaces;
+using System.Collections.Generic;
 
 
 namespace Shop_Yar.Data.Models
