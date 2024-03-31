@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Shop_Yar.Controllers
 {
-    public class ItemsController
+    public class ItemsController : Controller
     {
         private IItems IAllItems;
         private ICategorys IAllCategorys;

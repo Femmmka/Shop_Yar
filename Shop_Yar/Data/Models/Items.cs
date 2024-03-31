@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Shop_Yar.Data.Models
 {
-    public class Items
+    public class items
     {
         public int Id { get; set; }
         public string Name { get; set; }
