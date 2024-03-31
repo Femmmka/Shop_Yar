@@ -6,6 +6,6 @@ namespace Shop_Yar.Data.Interfaces
 {
     public interface ICategorys
     {
-        IEnumerable<ICategorys> AllCategorys { get; }
+        IEnumerable<Categorys> AllCategorys { get; }
     }
 }

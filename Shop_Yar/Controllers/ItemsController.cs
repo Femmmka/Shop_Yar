@@ -8,7 +8,7 @@ namespace Shop_Yar.Controllers
         private IItems IAllItems;
         private ICategorys IAllCategorys;
 
-        public ItemsController(IItems IAllItems, ICategorys, IAllCategorys)
+        public ItemsController(IItems IAllItems, ICategorys IAllCategorys)
         {
             this.IAllItems = IAllItems;
             this.IAllCategorys = IAllCategorys;
