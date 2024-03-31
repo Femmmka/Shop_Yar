@@ -6,6 +6,6 @@ namespace Shop_Yar.Data.Interfaces
 {
     public interface IItems
     {
-        public IEnumerable<items> AllItems { get; }
+        public IEnumerable<Items> AllItems { get; }
     }
 }
