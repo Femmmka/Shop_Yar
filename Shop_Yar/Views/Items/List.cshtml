@@ -1,13 +1,41 @@
 ﻿@using Shop_Yar.Data.Models;
+@using Shop_Yar.Data.ViewModell;
 
-@model IEnumerable<Items>
+@model VMItems
 @{
     Layout = "_Layout";
 }
+
+<div>
+    <select onchange="SelectCategory(this)">
+        <option value="0">Выбрать...</option>
+        @{
+            foreach(var Category in Model.Categorys)
+            {
+                if (Category.Id == Model.SelectCategory)
+                {
+                    <option selected="selected" value="@Category.Id">@Category.Name</option>
+                }
+                else
+                {
+                    <option value="@Category.Id">@Category.Name</option>
+                }
+            }
+
+         }
+    </select>
+    <script>
+        function SelectCategory(sender) {
+            window.location = "/Items/List?id" + sender.value;
+        }
+    </script>
+</div>
+
 <h2>Все предметы</h2>
 @{
-    foreach (var item in Model)
+    foreach (var item in Model.Itmes)
     {
+        if (item.Category.Id == Model.SelectCategory) { 
         <div class="item">
             <img src="@item.Img"/>
             <div class="data">
@@ -18,5 +46,6 @@
 
             </div>
         </div>
+        }
     }
 }

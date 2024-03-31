@@ -14,10 +14,11 @@ namespace Shop_Yar.Data.Common
         {
             MySqlConnection NewMySqlConnection = new MySqlConnection(ConnectionData);
             NewMySqlConnection.Open();
+            return NewMySqlConnection;
         }
         public static MySqlDataReader MySqlQuery(string Query, MySqlConnection Connection)
         {
-            MySqlCommand mySqlCommand = new MySqlCommand(Query, Connection);
+            MySqlCommand NewMySqlCommand = new MySqlCommand(Query, Connection);
             return NewMySqlCommand.ExecuteReader();
         }
         public static void MySqlClose(MySqlConnection connection)

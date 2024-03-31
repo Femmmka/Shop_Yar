@@ -13,7 +13,7 @@ namespace Shop_Yar.Data.DataBase
             get
             {
                 List<Categorys> categorys = new List<Categorys>();
-                MySqlConnection mySqlConnection = Connection.MySqlOpen();
+                MySqlConnection MySqlConnection = Connection.MySqlOpen();
                 MySqlDataReader CategorysData = Connection.MySqlQuery("SELECT * FROM Shop.Categorys ORDER NY `Name`;", MySqlConnection);
                 while (CategorysData.Read())
                 {
