@@ -9,13 +9,13 @@ namespace Shop_Yar.Data.Mocks
     {
         public ICategorys _categorys = new MockCategorys();
 
-        public IEnumerable<Items> AllItems
+        public IEnumerable<items> AllItems
         {
             get
             {
-                return new List<Items>()
+                return new List<items>()
                 {
-                    new Items()
+                    new items()
                     {
                         Id=0,
                         Name="DEXP MS-70",
@@ -24,10 +24,10 @@ namespace Shop_Yar.Data.Mocks
                         Price=3699,
                         Category=_categorys.AllCategorys.Where(x=>x.Id==0).First()
                     },
-                    new Items(){},
-                    new Items(){},
-                    new Items(){},
-                    new Items(){}
+                    new items(){},
+                    new items(){},
+                    new items(){},
+                    new items(){}
                 };
             }
         }
